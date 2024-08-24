@@ -8,3 +8,6 @@
 - Pegar foto dos dois projeto raízes
 
 - Se sobrar tempo, colocar lazer (Despertar/Basquete, corrida e leitura).
+img circular: https://tinywow.com/image/crop-circle
+
+#274e38

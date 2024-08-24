@@ -1,3 +1,4 @@
+/*  */
 /* fonte google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); 
 
@@ -8,16 +9,54 @@ margin: 0;
 box-sizing: borde-box;
 font-family: 'Poppins',sans-serif;
 text-decoration: none;
+font-size: 18pt;
+}
+/* var de cores */
+:root{
+    --gray:#808080;
+    --green:#274e38;
 }
 
 /* body */
 body{
     font-family: 'Poppins',sans-serif;
     flex-wrap: wrap;
+    background-color:var(--gray);
+}
+/* textos */
+section h1,h2,h3,b{
+    color: var(--green);
+}
+h1{
+    font-size: 2rem;
+}
+#rapidao{
+    width: 50dvw;
+    border-radius: 10px;
 }
 
+.nav{
+    background-color: gray; /* fundo do nav */
+    display: flex; /* vai se mover */
+    align-items: center; /* itens de dentro, vai pro centro */
+    justify-content: space-between; /* vai ser dado espaço de acordo */
+    width: 100%; /* total da tela */
+    position: relative;
+    box-shadow: 0 0.1rem 0.5rem #cccccc; /* embaça */
+
+}
+
+.nav ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navegacao ul li 
+
+
 /* Footer */
-footer{
+#footer{
     background-color: black;
     color: white;
 }
