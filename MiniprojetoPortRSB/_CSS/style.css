@@ -14,7 +14,9 @@ font-size: 18pt;
 /* var de cores */
 :root{
     --gray:#808080;
+    --Lgray:#504f4f;
     --green:#274e38;
+    --Lgreen: #065f06;
 }
 
 /* body */
@@ -24,16 +26,16 @@ body{
     background-color:var(--gray);
 }
 /* textos */
-section h1,h2,h3,b{
+section h1,h2,h3{
     color: var(--green);
 }
 h1{
     font-size: 2rem;
 }
-#rapidao{
-    width: 50dvw;
-    border-radius: 10px;
-}
+
+
+
+/* HEADER BAR */
 
 .nav{
     background-color: gray; /* fundo do nav */
@@ -41,22 +43,165 @@ h1{
     align-items: center; /* itens de dentro, vai pro centro */
     justify-content: space-between; /* vai ser dado espaço de acordo */
     width: 100%; /* total da tela */
-    position: relative;
-    box-shadow: 0 0.1rem 0.5rem #cccccc; /* embaça */
-
-}
+    position:relative;
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* embaça */
+    text-decoration: none;
+} 
 
 .nav ul{
     display: flex;
     align-items: center;
     gap: 5rem;
 }
+/* foto */
+.nav img{
+    width: 10dvw;
+    padding: 1rem;
+}
 
-.navegacao ul li 
+.nav ul li {
+    list-style: none;/* tira a listagem */
+    padding: 1rem;
+}
+
+.nav a{
+    color: var(--green);
+    font-weight: bold;
+}
+
+.nav a:hover{
+    color: var(--Lgreen);
+}
+
+
+/* SECTION*/
+/* alinhamento dos itens */
+#Map{
+    flex-direction: row;
+    display: flex;
+    margin-top:3rem;
+    width: 90dvw;
+    margin-left: 2rem;
+    
+}
+/* tamanho da foto */
+#itemOne img{
+    width: 8dvw;
+}
+
+
+#itemSec img{
+    width: 8dvw;
+}
+
+#itemTird img{
+    width: 8dvw;
+}
+/* blocos  */
+.lineTime{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between ;
+    align-items:baseline ;
+    padding: 5dvb;
+    border-top: 10px dashed var(--green);
+}
+
+/* textos das imagens */
+.lineTime h3{
+    font-size: 15pt;
+}
+
+/* div text do lado*/
+#textmyself{
+    margin-left: 2rem;
+}
+
+
+/* SECTION 2 SKILLS */
+#skills{
+    margin-top: 5rem;
+}
+/* texto e foto do lado */
+.broken{
+    display: inline-block;
+}
+.broken #talk{
+    width: 50dvw;
+    border-radius: 3rem;
+    margin-left: 1rem;
+}
+#softSK li{
+    list-style: none;
+}
+
+/* fotos skills redes */
+.album{
+    margin: 0;
+    padding: 2rem;
+    overflow: hidden;
+    list-style: none;
+}
+
+.album li{
+    float: left;
+    width: 15dvw;
+    height: 30dvh; /* inverter a altura e largura depois na responsividade */
+    margin: 0rem 1rem 2rem 1rem; /* cima,direita,baixo,esquerda */
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* borrado de fundo */
+    border-radius: 1rem;
+}
+/* add fotos redes*/
+.HKnetft1{
+    background: url('/MiniprojetoPortRSB/_img/dhcp.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+.HKnetft2{
+    background: url('/MiniprojetoPortRSB/_img/dns.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+.HKnetft3{
+    background: url('/MiniprojetoPortRSB/_img/ftp.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+.HKnetft4{
+    background: url('/MiniprojetoPortRSB/_img/webiis.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+/* espaço de tituli redes */
+.netSimbol{
+    margin-top: 5rem;
+}
+/* add fotos developer */
+.HKdevft1{
+    background: url('/MiniprojetoPortRSB/_img/front.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+.HKdevft2{
+    background: url('/MiniprojetoPortRSB/_img/back.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+.HKdevft3{
+    background: url('/MiniprojetoPortRSB/_img/mobile.png') no-repeat; /* coloca a ft e não repete */
+    background-position: 50% 50%; /* no fundo no meio */
+    background-size: 200px 200px; /* tamanho  largura e altura */
+}
+/* espaço de titulo dev */
+
 
 
 /* Footer */
 #footer{
-    background-color: black;
+    background-color:var(--green);
     color: white;
+    border-top: solid 2rem black;
+}
+.direction img{
+    width: 5dvw;
 }
