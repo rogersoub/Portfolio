@@ -249,7 +249,9 @@ h1{
 .direction img{
     width: 5dvw;
 }
-
+#zap{
+    border-radius: 3rem;
+}
 
 
 
