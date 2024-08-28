@@ -24,11 +24,13 @@ body{
     font-family: 'Poppins',sans-serif;
     flex-wrap: wrap;
     background-color:var(--gray);
+    overflow-x: hidden; /* tira a barra de rolagem horizontal */
     
 }
 /* textos */
 section h1,h2,h3{
     color: var(--green);
+    overflow: hidden;/* esconde se passar */
 }
 h1{
     font-size: 2rem;
@@ -122,6 +124,7 @@ h1{
 /* div text do lado*/
 #textmyself{
     margin-left: 2rem;
+    overflow: hidden;/* esconde se passar */
 }
 
 
@@ -160,22 +163,22 @@ h1{
 }
 /* add fotos redes*/
 .HKnetft1{
-    background: url('/_img/dhcp.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/dhcp.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft2{
-    background: url('/_img/dns.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/dns.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft3{
-    background: url('/_img/ftp.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/ftp.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft4{
-    background: url('/_img/webiis.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/webiis.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
@@ -185,17 +188,17 @@ h1{
 }
 /* add fotos developer */
 .HKdevft1{
-    background: url('/_img/front.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/front.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKdevft2{
-    background: url('/_img/back.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/back.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKdevft3{
-    background: url('/_img/mobile.png') no-repeat; /* coloca a ft e não repete */
+    background: url('/roger/_img/mobile.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
@@ -245,6 +248,7 @@ h1{
     color: white;
     border-top: solid 2rem black;
     width: 100dvw;
+    overflow: hidden;/* esconde se passar */
 }
 .direction img{
     width: 5dvw;
