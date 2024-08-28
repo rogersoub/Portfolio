@@ -24,6 +24,7 @@ body{
     font-family: 'Poppins',sans-serif;
     flex-wrap: wrap;
     background-color:var(--gray);
+    
 }
 /* textos */
 section h1,h2,h3{
@@ -36,25 +37,28 @@ h1{
 
 
 /* HEADER BAR */
+.header-mb{
+    display: none;
+}
 
-.nav{
+.header-dk{
+    overflow: hidden;/* esconde se passar */
     background-color: gray; /* fundo do nav */
     display: flex; /* vai se mover */
     align-items: center; /* itens de dentro, vai pro centro */
     justify-content: space-between; /* vai ser dado espaço de acordo */
-    width: 100%; /* total da tela */
+    width: 100dvw; /* total da tela */
     position:relative;
     box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* embaça */
-    text-decoration: none;
 } 
 
-.nav ul{
+.header-dk ul{
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 8dvw;
 }
 /* foto */
-.nav img{
+.header-dk img{
     width: 10dvw;
     padding: 1rem;
 }
@@ -62,6 +66,7 @@ h1{
 .nav ul li {
     list-style: none;/* tira a listagem */
     padding: 1rem;
+    text-decoration: none;
 }
 
 .nav a{
@@ -74,9 +79,11 @@ h1{
 }
 
 
+
 /* SECTION*/
+
 /* alinhamento dos itens */
-#Map{
+#camptime{
     flex-direction: row;
     display: flex;
     margin-top:3rem;
@@ -139,7 +146,7 @@ h1{
 .album{
     margin: 0;
     padding: 2rem;
-    overflow: hidden;
+    overflow: hidden;/* esconde se passar */
     list-style: none;
 }
 
@@ -192,16 +199,193 @@ h1{
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
-/* espaço de titulo dev */
 
 
 
-/* Footer */
+/* SECTION 3 view JS */
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0rem 5rem 2rem 5rem; /* cima,direita,baixo,esquerda */
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* borrado de fundo */
+    border-radius: 2rem;
+}
+
+.preview img{
+    width: 30dvw;
+    border-radius: 2rem;
+}
+
+.preview .clickUP:hover{
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* borrado de fundo */
+    cursor: pointer;
+}
+
+#viewTi,#viewPDA,#viewSchool{
+    margin: 2rem;
+}
+
+.repertory{
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.repertory:hover{
+    color: var(--Lgreen);
+}
+
+
+
+/* FOOTER */
 #footer{
     background-color:var(--green);
     color: white;
     border-top: solid 2rem black;
+    width: 100dvw;
 }
 .direction img{
     width: 5dvw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+/* celulares */
+@media(max-width:1000px){
+    /* textos */
+    h1{
+        font-size: 15pt;
+        overflow: hidden;
+    }
+
+    p{
+        font-size:10pt;
+    }
+    li{
+        font-size:10pt;
+    }
+    b{
+        font-size:10pt;
+    }
+    h2{
+        font-size:10pt;
+    }
+    a{
+        font-size:1rem;
+    }
+    
+    /* aparece e desaparece */
+    .header-dk{
+        display: none;
+    }
+    .header-mb{
+        display: flex;
+    }
+    
+    .header-mb{
+        /* overflow: hidden; esconde se passar */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 2rem;
+        font-size: 15pt;
+
+    } 
+
+    .header-mb img{
+        width: 30dvw;
+        padding: 0rem;
+    }
+
+    .cont-ul{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+
+
+    /* SECTION 1*/
+
+/* alinhamento dos itens */
+#camptime{
+    flex-direction:column;
+    
+}
+/* tamanho da foto */
+#itemOne img{
+    width: 15dvw;
+}
+
+
+#itemSec img{
+    width: 15vw;
+}
+
+#itemTird img{
+    width: 15dvw;
+}
+/* blocos  */
+.lineTime{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between ;
+    align-items:baseline ;
+    padding: 5dvb;
+    border-top: none;
+    border-left: 10px dashed var(--green);
+}
+
+
+
+/* SECTION 2 ALBUM */
+.album li{
+    float: left;
+    width: 50dvw;
+    height: 35dvh; /* inverter a altura e largura depois na responsividade */
+}
+
+
+
+/* SECTION 3 view JS */
+.preview{
+    padding: 0px;
+    padding-right: 0%;
+    margin: 0rem 0rem 2rem 0rem; /* cima,direita,baixo,esquerda */
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* borrado de fundo */
+    border-radius: 2rem;
+}
+
+.preview img{
+    width: 40dvw;
+}
+
+.preview .clickUP:hover{
+    box-shadow: 0 0.1rem 0.5rem var(--Lgray); /* borrado de fundo */
+    cursor: pointer;
+}
+
+/* #viewTi,#viewPDA,#viewSchool{
+    margin: 2rem;
+} */
+
+
+
+.direction img{
+    width: 15dvw;
+}
+
+
 }

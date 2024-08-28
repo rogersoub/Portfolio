@@ -10,4 +10,6 @@
 - Se sobrar tempo, colocar lazer (Despertar/Basquete, corrida e leitura).
 img circular: https://tinywow.com/image/crop-circle
 
-#274e38
+Verde de cor: #274e38
+
+css: https://www.w3schools.com/cssref/css3_pr_box-shadow.php
