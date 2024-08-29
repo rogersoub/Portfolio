@@ -163,22 +163,22 @@ h1{
 }
 /* add fotos redes*/
 .HKnetft1{
-    background: url('../_img/dhcp.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/dhcp.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft2{
-    background: url('../_img/dns.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/dns.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft3{
-    background: url('../_img/ftp.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/ftp.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKnetft4{
-    background: url('../_img/webiis.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/webiis.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
@@ -188,17 +188,17 @@ h1{
 }
 /* add fotos developer */
 .HKdevft1{
-    background: url('../_img/front.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/front.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKdevft2{
-    background: url('../_img/back.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/back.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
 .HKdevft3{
-    background: url('../_img/mobile.png') no-repeat; /* coloca a ft e não repete */
+    background: url('_img/mobile.png') no-repeat; /* coloca a ft e não repete */
     background-position: 50% 50%; /* no fundo no meio */
     background-size: 200px 200px; /* tamanho  largura e altura */
 }
