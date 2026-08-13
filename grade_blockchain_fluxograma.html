@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Grade Blockchain — Matemática Computacional UFMG</title>
+<style>
+  :root{
+    --dcc-bg:#e8f3df; --dcc-bd:#7fae4d; --dcc-tx:#2c4a17;
+    --mat-bg:#fbf1da; --mat-bd:#d9a53a; --mat-tx:#6b4c0a;
+    --est-bg:#fbe7e7; --est-bd:#c56060; --est-tx:#7a2323;
+    --ice-bg:#e5f0fb; --ice-bd:#5a94c9; --ice-tx:#1f4a75;
+    --ecn-bg:#efefec; --ecn-bd:#9c9a92; --ecn-tx:#3d3d3a;
+    --bg:#ffffff; --text:#222222; --muted:#666;
+  }
+  body{
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--bg); color: var(--text);
+    margin:0; padding:32px 24px 60px;
+  }
+  h1{font-size:20px; font-weight:600; margin:0 0 4px;}
+  .sub{color:var(--muted); font-size:13px; margin:0 0 24px;}
+  .legend{display:flex; gap:18px; flex-wrap:wrap; margin-bottom:28px; font-size:12px;}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .swatch{width:12px; height:12px; border-radius:3px; display:inline-block;}
+  #stage{position:relative;}
+  .row{display:flex; align-items:stretch; margin-bottom:0; position:relative;}
+  .row-label{
+    width:34px; flex:0 0 34px; display:flex; align-items:center; justify-content:center;
+    font-weight:600; font-size:15px; color:var(--muted); margin: 10px;
+  }
+  .row-body{
+    flex:1; display:flex; gap:14px; padding:14px 4px;
+    border-top:1px dashed #ddd;
+  }
+  .row:first-child .row-body{border-top:none;}
+  .card{
+    flex:1; min-width:0; border-radius:8px; border:1.5px solid;
+    padding:10px 12px; font-size:12.5px; line-height:1.35;
+    box-sizing:border-box;
+  }
+  .card .title{font-weight:600; margin-bottom:3px; font-size:12.5px;}
+  .card .code{font-size:11px; opacity:0.85;}
+  .dcc{background:var(--dcc-bg); border-color:var(--dcc-bd); color:var(--dcc-tx);}
+  .mat{background:var(--mat-bg); border-color:var(--mat-bd); color:var(--mat-tx);}
+  .est{background:var(--est-bg); border-color:var(--est-bd); color:var(--est-tx);}
+  .ice{background:var(--ice-bg); border-color:var(--ice-bd); color:#1f4a75;}
+  .ecn{background:var(--ecn-bg); border-color:var(--ecn-bd); color:var(--ecn-tx);}
+  svg#arrows{position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;}
+  .foot{margin-top:28px; font-size:12px; color:var(--muted); max-width:900px;}
+</style>
+</head>
+<body>
+
+<h1>Grade personalizada — Matemática Computacional (UFMG) rumo a Blockchain Engineering</h1>
+<p class="sub">Percurso Bacharelado com Perfil em Computação · Aproximadamente 4 disciplinas/semestre · setas = sequência sugerida de pré-requisitos</p>
+
+<div class="legend">
+  <span><i class="swatch" style="background:var(--dcc-bg);border:1.5px solid var(--dcc-bd)"></i>Ciência da Computação (DCC)</span>
+  <span><i class="swatch" style="background:var(--mat-bg);border:1.5px solid var(--mat-bd)"></i>Matemática (MAT)</span>
+  <span><i class="swatch" style="background:var(--est-bg);border:1.5px solid var(--est-bd)"></i>Estatística (EST)</span>
+  <span><i class="swatch" style="background:var(--ice-bg);border:1.5px solid var(--ice-bd)"></i>Interdisciplinar (ICE)</span>
+  <span><i class="swatch" style="background:var(--ecn-bg);border:1.5px solid var(--ecn-bd)"></i>Economia (ECN)</span>
+</div>
+
+<div id="stage">
+<svg id="arrows"></svg>
+
+<div class="row">
+  <div class="row-label">2025/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC203"><div class="title">Programação e Desenv. de Software I</div><div class="code">DCC203 · 4cr</div></div>
+    <div class="card ice" id="ICE137"><div class="title">Introdução à Matemática Computacional</div><div class="code">ICE137 · 2cr</div></div>
+    <div class="card mat" id="MAT038"><div class="title">Geometria Analítica e Álgebra Linear</div><div class="code">MAT038 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2026/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC638"><div class="title">Introdução à Lógica Computacional</div><div class="code">DCC638 · 4cr</div></div>
+    <div class="card dcc" id="DCC219"><div class="title">Prog. e Desenv. de Software II</div><div class="code">DCC219 · 4cr</div></div>
+    <div class="card mat" id="MAT001"><div class="title">Cálculo Diferencial e Integral I</div><div class="code">MAT001 · 6cr</div></div>
+    <div class="card mat" id="MAT048"><div class="title">Álgebra Linear I</div><div class="code">MAT048 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2027/1</div>
+  <div class="row-body">
+        <div class="card dcc" id="DCC216"><div class="title">Matemática Discreta</div><div class="code">DCC216 · 4cr</div></div>
+    <div class="card dcc" id="DCC221"><div class="title">Estruturas de Dados</div><div class="code">DCC221 · 4cr</div></div>
+    <div class="card mat" id="MAT039"><div class="title">Cálculo Diferencial e Integral II</div><div class="code">MAT039 · 4cr</div></div>
+    <div class="card mat" id="MAT034"><div class="title">Álgebra A</div><div class="code">MAT034 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2027/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC639"><div class="title">Álgebra Linear Computacional</div><div class="code">DCC639 · 4cr</div></div>
+    <div class="card dcc" id="DCC206"><div class="title">Algoritmos I</div><div class="code">DCC206 · 4cr</div></div>
+    <div class="card est" id="EST032"><div class="title">Probabilidade</div><div class="code">EST032 · 4cr</div></div>
+    <div class="card mat" id="MAT002"><div class="title">Cálculo Diferencial e Integral III</div><div class="code">MAT002 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2028/1</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC051"><div class="title">Introdução à Ciência dos Dados</div><div class="code">DCC051 · 4cr</div></div>
+    <div class="card dcc" id="DCC222"><div class="title">Introdução a Bancos de Dados</div><div class="code">DCC222 · 4cr</div></div>
+    <div class="card dcc" id="DCC035"><div class="title">Pesquisa Operacional</div><div class="code">DCC035 · 4cr</div></div>
+    <div class="card mat" id="MAT213"><div class="title">Álgebra Linear II</div><div class="code">MAT213 · 6cr</div></div>
+    <div class="card mat" id="MAT015"><div class="title">Equações Diferenciais A</div><div class="code">MAT015 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2028/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC207"><div class="title">Algoritmos II</div><div class="code">DCC207 · 4cr</div></div>
+    <div class="card mat" id="MAT243"><div class="title">Análise I</div><div class="code">MAT243 · 6cr</div></div>
+    <div class="card dcc" id="DCC094"><div class="title">Engenharia de Software</div><div class="code">DCC094 · 4cr</div></div>
+    <div class="card mat" id="MAT016"><div class="title">Equações Diferenciais B</div><div class="code">MAT016 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2029/1</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC129"><div class="title">Fund. da Teoria da Computação</div><div class="code">DCC129 · 4cr</div></div>
+    <div class="card dcc" id="DCC199"><div class="title">Teoria dos Grafos</div><div class="code">DCC199 · 4cr</div></div>
+    <div class="card dcc" id="DCC641"><div class="title">Fund. de Sist. Paralelos e Distribuídos</div><div class="code">DCC641 · 2cr</div></div>
+    <div class="card dcc" id="DCC642"><div class="title">Introdução à Inteligência Artificial</div><div class="code">DCC642 · 2cr</div></div>
+    <div class="card mat" id="MAT235"><div class="title">Algebra Linear Numérica</div><div class="code">MAT235 · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2029/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC223"><div class="title">Introdução à Segurança Computacional</div><div class="code">DCC223 (opt) · 4cr</div></div>
+    <div class="card dcc" id="DCC024"><div class="title">Linguagens de Programação</div><div class="code">DCC024 (opt) · 4cr</div></div>
+    <div class="card mat" id="MAT236"><div class="title">Equações Diferenciais Numéricas</div><div class="code">MAT236 · 4cr</div></div>
+    <div class="card mat" id="MAT232"><div class="title">Grupos e Corpos</div><div class="code">MAT232 (opt) · 4cr</div></div>
+    <div class="card mat" id="MAT237"><div class="title">Teoria dos Números</div><div class="code">MAT237 (opt) · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2030/1</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC605"><div class="title">Sistemas Operacionais</div><div class="code">DCC605 (opt) · 4cr</div></div>
+    <div class="card dcc" id="DCC095"><div class="title">Redes de Computadores</div><div class="code">DCC095 (opt) · 4cr</div></div>
+    <div class="card dcc" id="DCC090"><div class="title">Teoria da Informação</div><div class="code">DCC090 (opt) · 4cr</div></div>
+    <div class="card est" id="EST039"><div class="title">Processos Estocásticos</div><div class="code">EST039 (opt) · 4cr</div></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row-label">2030/2</div>
+  <div class="row-body">
+    <div class="card dcc" id="DCC058"><div class="title">Sist. Paralelos e Distribuídos (Projeto)</div><div class="code">DCC058 (opt) · 4cr</div></div>
+    <div class="card dcc" id="DCC092"><div class="title">Métodos Formais</div><div class="code">DCC092 (opt) · 4cr</div></div>
+    <div class="card dcc" id="DCC053"><div class="title">Compiladores I</div><div class="code">DCC053 (opt) · 4cr</div></div>
+    <div class="card ecn" id="ECN101"><div class="title">Economia A I</div><div class="code">ECN101 (opt) · 4cr</div></div>
+  </div>
+</div>
+
+</div>
+
+<p class="foot">
+As setas conectam disciplinas onde há dependência natural de conteúdo (ex.: Álgebra A → Grupos e Corpos, base de criptografia de curva elíptica). O relatório oficial de percurso não lista pré-requisitos formais por disciplina — confirme no SIGA antes de matricular.
+</p>
+
+<script>
+const pairs = [
+  ["MAT001","MAT039"], ["MAT039","MAT002"],
+  ["MAT048","MAT213"],
+  ["DCC221","DCC206"], ["DCC206","DCC207"],
+  ["MAT015","MAT016"],
+  ["EST032","EST039"],
+  ["DCC216","DCC129"], ["DCC216","DCC199"],
+  ["DCC641","DCC058"],
+  ["MAT034","MAT232"], ["MAT034","MAT237"],
+  ["DCC221","DCC223"],
+  ["DCC219","DCC094"]
+];
+
+function draw(){
+  const svg = document.getElementById('arrows');
+  const stage = document.getElementById('stage');
+  const stageRect = stage.getBoundingClientRect();
+  svg.innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9a92" stroke-width="1.5"/></marker></defs>`;
+  pairs.forEach(([a,b])=>{
+    const elA = document.getElementById(a);
+    const elB = document.getElementById(b);
+    if(!elA||!elB) return;
+    const ra = elA.getBoundingClientRect();
+    const rb = elB.getBoundingClientRect();
+    const x1 = ra.right - stageRect.left;
+    const y1 = ra.top + ra.height/2 - stageRect.top;
+    const x2 = rb.left - stageRect.left;
+    const y2 = rb.top + rb.height/2 - stageRect.top;
+    const midx = (x1+x2)/2;
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    let d;
+    if (Math.abs(y1-y2) < 4) {
+      d = `M${x1},${y1} L${x2},${y2}`;
+    } else {
+      d = `M${x1},${y1} C${midx},${y1} ${midx},${y2} ${x2},${y2}`;
+    }
+    path.setAttribute('d', d);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke','#9c9a92');
+    path.setAttribute('stroke-width','1.2');
+    path.setAttribute('marker-end','url(#ah)');
+    svg.appendChild(path);
+  });
+}
+window.addEventListener('load', draw);
+window.addEventListener('resize', draw);
+</script>
+
+</body>
+</html>
